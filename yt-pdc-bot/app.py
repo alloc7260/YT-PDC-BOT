@@ -34,19 +34,15 @@ class EchoBot(ActivityHandler):
                 await turn_context.send_activity("Hello and welcome!")
 
     async def on_message_activity(self, turn_context: TurnContext):
+        if turn_context.activity.text=="/start":
+            return await turn_context.send_activity(
+                MessageFactory.text("Hi! There\n\nSend/Share me YouTube URL\n\nDEMO :\nhttps://www.youtube.com/playlist?list=PLZDMziPRHWIrkfzKIXUOrir_gwD0cD9f8")
+            )
         URL = turn_context.activity.text
         tbot.arg_check(3, URL)
         return await turn_context.send_activity(
-            MessageFactory.text(tbot.fuc(3, URL))
+            MessageFactory.text(f"Your Playlists Total Duration is : {str(tbot.fuc(3, URL))}")
         )
-
-    # async def on_message_activity(self, turn_context: TurnContext):
-    #     method,URL = (turn_context.activity.text).split()
-    #     myp.arg_check(int(method), URL)
-    #     return await turn_context.send_activity(
-    #         MessageFactory.text(myp.fuc(int(method), URL))
-    #     )
-
 
 CONFIG = DefaultConfig()
 
