@@ -15,4 +15,4 @@
 
 ## Enjoy with your BOT!
 
-### YouTube Help Video - https://www.youtube.com/watch?v=wUsQvRInYcw&list=PLZDMziPRHWIqNoPPn2XqBQ9Tpo4FWBx8P&index=11
+### YouTube Help Video - https://youtu.be/wUsQvRInYcw
